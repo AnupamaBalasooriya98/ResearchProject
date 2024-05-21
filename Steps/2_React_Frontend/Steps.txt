@@ -1,0 +1,5 @@
+Run the following commands in VS code terminal
+
+1. npx create-react-app myfrontend
+2. cd myfrontend
+3. npm install axios react-router-dom
