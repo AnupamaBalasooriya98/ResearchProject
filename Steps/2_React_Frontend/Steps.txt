@@ -3,3 +3,43 @@ Run the following commands in VS code terminal
 1. npx create-react-app myfrontend
 2. cd myfrontend
 3. npm install axios react-router-dom
+
+4. Create a new folder in src called components and create two JS files
+    called Button and Form to create UI components for different UI elements
+    4.1. Button.js
+        jsx
+        import React from 'react';
+        const Button = ({label, onClick}) => {
+            return (
+                <button onClick={onClick}>Button</button>
+            )
+        }
+        export default Button;
+    4.2. Form.js
+        jsx
+        import React, {useState} from "react";
+        import axios from 'axios';
+        const Form = () => {
+            const [inputValue, setInputValue] = useState('');
+            const handleSubmit = async (e) => {
+                e.preventDefault();
+                try {
+                    const response = await axios.post('/api/ui-elements', {data: inputValue});
+                    console.log('Reesponse from backend: ', response.data);
+                    // Handle the response data as needed
+                } catch (error) {
+                    console.error('Error sending data: ', error);
+                }
+            };
+            return (
+                <form onSubmit={handleSubmit}>
+                    <input 
+                        type="text" 
+                        value={inputValue} 
+                        onChange={(e) => setInputValue(e.target.value)} />
+                    <button type='submit'>Submit</button>
+                </form>
+            );
+        };
+        export default Form;
+
