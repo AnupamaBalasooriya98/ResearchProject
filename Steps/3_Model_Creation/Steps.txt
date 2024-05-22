@@ -1,0 +1,2 @@
+1. Download the UIED model into the project (https://github.com/MulongXie/UIED.git)
+2. Download the other required data given in the UIED > README file
