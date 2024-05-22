@@ -2,3 +2,9 @@
 2. Download the other required data given in the UIED > README file
     - This cannot push to the GIT repo as the file is too large
     - So just download it and rename the rename the required paths
+3. Install the required dependancies into the project through VS code terminal using following commands
+    opencv - pip install opencv-python
+    pandas - pip install pandas
+    keras - pip install keras
+    sklearn - pip install scikit-learn
+    tensorflow - pip install tensorflow
